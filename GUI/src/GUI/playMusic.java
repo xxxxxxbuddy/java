@@ -23,7 +23,6 @@ public class playMusic extends Thread {
 	static float dB;
 	static FloatControl fc;
 	static int volumeValue = 5 ;
-	static SourceDataLine auline = null;
 	
 	
 	public void run() {
@@ -44,7 +43,7 @@ public class playMusic extends Thread {
 		AudioFormat format = audioInputStream.getFormat();
  
 		// 源数据行SoureDataLine是可以写入数据的数据行
-		//SourceDataLine auline = null;
+		SourceDataLine auline = null;
  
 		// 获取受数据行支持的音频格式DataLine.info
  
@@ -140,12 +139,6 @@ public class playMusic extends Thread {
 //		System.out.println(value);
 //		System.out.println(dB);
 		return volumeValue;
-	}
-	public void pause() throws InterruptedException{
-		auline.close();
-	}
-	public void Resume(){
-		auline.drain();
 	}
 }
 
