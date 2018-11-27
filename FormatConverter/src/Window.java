@@ -4,14 +4,18 @@ import java.awt.Insets;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Console;
 import java.io.File;
+import java.util.TimerTask;
 
 import javax.swing.*;
+import javax.swing.plaf.ProgressBarUI;
 
 public class Window {
 	JFrame jf;
 	JPanel jp;
 	JButton jb1, jb2 ,jb3 ,jb4;
+	JProgressBar progressBar;
 	private static String filePath = null;
 	
 	public Window() {
@@ -21,6 +25,8 @@ public class Window {
 		jb2 = new JButton("txt转Word");
 		jb3 = new JButton("txt转Word");
 		jb4 = new JButton("txt转Word");
+		
+		progressBar = new JProgressBar(0, 100);
 		
 //		jb1.setBounds(5, 10, 200, 100);
 //		jb2.setBounds(220, 10, 200, 100);
@@ -58,6 +64,7 @@ public class Window {
 		jp.add(jb2);
 		jp.add(jb3);
 		jp.add(jb4);
+		jp.add(progressBar);
 		
 		/**	生成窗体	**/
 		jf = new JFrame("格式转换器");
