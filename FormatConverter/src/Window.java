@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.TimerTask;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.plaf.ProgressBarUI;
 
 public class Window {
@@ -22,7 +23,7 @@ public class Window {
 		/**	新建面板及按钮组件	**/
 		jp = new JPanel();
 		jb1 = new JButton("txt转Word");
-		jb2 = new JButton("txt转Word");
+		jb2 = new JButton("wav转mp3");
 		jb3 = new JButton("txt转Word");
 		jb4 = new JButton("txt转Word");
 		
@@ -45,7 +46,7 @@ public class Window {
 		jb3.setBackground(new Color(238, 238, 209));
 		jb4.setBackground(new Color(238, 180, 180));
 		jb1.setActionCommand("txt_word");
-		jb2.setActionCommand("mp4_mp3");
+		jb2.setActionCommand("wav_mp3");
 		jb3.setActionCommand("png_jpg");
 		jb4.setActionCommand("database");
 		
@@ -91,6 +92,7 @@ public class Window {
 					e1.printStackTrace();
 				}
 			JFileChooser jfc = new JFileChooser();// TODO Auto-generated method stub
+			jfc.setFileFilter(new FileNameExtensionFilter(".wav、.wma", "wav","wma"));
 			jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 			jfc.showDialog(new Label(), "选择");
 			File file = jfc.getSelectedFile();
@@ -98,8 +100,14 @@ public class Window {
 			filePath = jfc.getSelectedFile().getAbsolutePath();
 			if(e.getActionCommand().equals("txt_word")){
 				
-			}else if(e.getActionCommand().equals("mp4_mp3")){
-				
+			}else if(e.getActionCommand().equals("wav_mp3")){
+				try {
+					Wavtomp3.WavtoMp3(file, file.getName().substring(0, file.getName().length() - 3).concat("mp3"));
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+					System.out.println("转换错误");
+				}
 			}else if(e.getActionCommand().equals("png_jpg")){
 				
 			}else if(e.getActionCommand().equals("database")){
