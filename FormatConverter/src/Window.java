@@ -1,11 +1,4 @@
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Insets;
-import java.awt.Label;
-import java.awt.LayoutManager;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Console;
@@ -20,6 +13,8 @@ public class Window {
 	JFrame jf;
 	JPanel jp;
 	JButton jb1, jb2, jb3, jb4;
+	JMenuBar jmb;
+	JMenu jm;
 	static JProgressBar progressBar;
 	private static String filePath = null;
 
@@ -30,16 +25,21 @@ public class Window {
 		jb2 = new JButton("wav转mp3");
 		jb3 = new JButton("txt转Word");
 		jb4 = new JButton("txt转Word");
-		jp.setLayout(new FlowLayout());
+		//jp.setLayout(new FlowLayout());
+		jp.setLayout(null);
 		progressBar = new JProgressBar(0, 100);
-		//progressBar.setValue(50);
 		progressBar.setPreferredSize(new Dimension(200, 20));
-		//progressBar.setStringPainted(true);
+		jmb = new JMenuBar();
+		jm = new JMenu("设置");
+		//jm.setAccelerator(new KeyStroke("k"));
 
-//		jb1.setBounds(5, 10, 200, 100);
-//		jb2.setBounds(220, 10, 200, 100);
-//		jb3.setBounds(5, 130, 200, 100);
-//		jb4.setBounds(220, 130, 200, 100);
+		jm.add(new JMenuItem("输出设置"));
+		jmb.add(jm);
+		jmb.setBounds(0,0,500,25);
+		jb1.setBounds(5, 30, 200, 100);
+		jb2.setBounds(220, 30, 200, 100);
+		jb3.setBounds(5, 150, 200, 100);
+		jb4.setBounds(220, 150, 200, 100);
 		/**    设置按钮尺寸	**/
 		jb1.setPreferredSize(new Dimension(200, 100));
 		jb2.setPreferredSize(new Dimension(200, 100));
@@ -68,12 +68,12 @@ public class Window {
 		jb4.addActionListener(cf4);
 
 		/**    将组件添加到面板	**/
-		jp.add(jb1);
-		jp.add(jb2);
-		jp.add(jb3);
-		jp.add(jb4);
+		jp.add(jb1,BorderLayout.SOUTH);
+		jp.add(jb2,BorderLayout.SOUTH);
+		jp.add(jb3,BorderLayout.SOUTH);
+		jp.add(jb4,BorderLayout.SOUTH);
 		jp.add(progressBar);
-
+		jp.add(jmb);
 
 		/**    生成窗体	**/
 		jf = new JFrame("格式转换器");
@@ -81,6 +81,7 @@ public class Window {
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 		jf.setMaximumSize(new Dimension(460, 260));
+		//jf.add(jmb);
 		jf.add(jp);
 
 	}
