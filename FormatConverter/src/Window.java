@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Console;
 import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
 import java.util.TimerTask;
 import java.util.function.IntUnaryOperator;
 
@@ -16,7 +18,12 @@ public class Window {
 	JMenuBar jmb;
 	JMenu jm;
 	static JProgressBar progressBar;
-	private static String filePath = null;
+	public static Boolean setPath = false;
+	public static String filePath = null;
+	String appTitle = "app_title";
+	String appVersion = "app_version";
+	String appProperties = "app.properties";
+	Properties settings = new Properties();
 
 	public Window() {
 		/**    新建面板及按钮组件	**/
@@ -33,13 +40,15 @@ public class Window {
 		jm = new JMenu("设置");
 		//jm.setAccelerator(new KeyStroke("k"));
 
-		jm.add(new JMenuItem("输出设置"));
+		JMenuItem jmi = new JMenuItem("输出设置");
+		jm.add(jmi);
 		jmb.add(jm);
 		jmb.setBounds(0,0,500,25);
 		jb1.setBounds(5, 30, 200, 100);
 		jb2.setBounds(220, 30, 200, 100);
 		jb3.setBounds(5, 150, 200, 100);
 		jb4.setBounds(220, 150, 200, 100);
+		progressBar.setBounds(100,260,220,20);
 		/**    设置按钮尺寸	**/
 		jb1.setPreferredSize(new Dimension(200, 100));
 		jb2.setPreferredSize(new Dimension(200, 100));
@@ -66,23 +75,46 @@ public class Window {
 		jb2.addActionListener(cf2);
 		jb3.addActionListener(cf3);
 		jb4.addActionListener(cf4);
+		jmi.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Setting();
+			}
+		});
 
 		/**    将组件添加到面板	**/
 		jp.add(jb1,BorderLayout.SOUTH);
 		jp.add(jb2,BorderLayout.SOUTH);
 		jp.add(jb3,BorderLayout.SOUTH);
 		jp.add(jb4,BorderLayout.SOUTH);
-		jp.add(progressBar);
+		jp.add(progressBar,BorderLayout.SOUTH);
 		jp.add(jmb);
 
 		/**    生成窗体	**/
 		jf = new JFrame("格式转换器");
-		jf.setBounds(500, 300, 460, 300);
+		jf.setBounds(500, 300, 460, 350);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 		jf.setMaximumSize(new Dimension(460, 260));
 		//jf.add(jmb);
 		jf.add(jp);
+
+		/*	读取配置 */
+		try{
+			FileInputStream in = new FileInputStream(appProperties);
+			settings.load(in);
+
+			String title = settings.getProperty(appTitle);
+			String version = settings.getProperty(appVersion);
+			if(settings.getProperty("filePath")!=null){
+				filePath = settings.getProperty("filePath");
+			}
+			in.close();
+			System.out.println(title + "\t" + version);
+		}catch(Exception ex2){
+			//ex2.printStackTrace();
+			System.out.println("初次加载");
+		}
 
 	}
 
@@ -108,7 +140,7 @@ public class Window {
 			jfc.showDialog(new Label(), "选择");
 			File file = jfc.getSelectedFile();
 			System.out.println(jfc.getSelectedFile().getAbsolutePath());
-			filePath = jfc.getSelectedFile().getAbsolutePath();
+			//filePath = jfc.getSelectedFile().getAbsolutePath();
 
 
 			if (e.getActionCommand().equals("txt_word")) {
@@ -120,7 +152,11 @@ public class Window {
 					public void run() {
 						try{
 							System.out.println("start");
-							Wavtomp3.Excute(file, file.getName().substring(0, file.getName().length() - 3).concat("mp3"));
+							if (setPath && filePath!=null ){
+								Wavtomp3.Excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("mp3")));
+							}else{
+								Wavtomp3.Excute(file, file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("mp3"));
+							}
 							SwingUtilities.invokeAndWait(new Runnable() {
 								@Override
 								public void run() {
@@ -169,4 +205,5 @@ public class Window {
 			return null;
 		}
 	}
+
 }
