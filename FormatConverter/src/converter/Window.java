@@ -1,36 +1,38 @@
+package converter;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Console;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.TimerTask;
-import java.util.function.IntUnaryOperator;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Window {
-	JFrame jf;
-	JPanel jp;
-	JButton jb1, jb2, jb3, jb4;
-	JMenuBar jmb;
-	JMenu jm;
-	static JProgressBar progressBar;
-	public static Boolean setPath = false;
-	public static String filePath = null;
-	String appTitle = "app_title";
-	String appVersion = "app_version";
-	String appProperties = "app.properties";
-	Properties settings = new Properties();
+	private JFrame jf;
+	private JPanel jp;
+	private JButton jb1, jb2, jb3, jb4;
+	private JMenuBar jmb;
+	private JMenu jm;
+	private static JProgressBar progressBar;
+	/* setPath值为true时，生成路径被修改，需要读取配置文件中的路径信息 */
+	static Boolean setPath = false;
+	private static String filePath = null;
+	/* 配置信息 */
+	private String appTitle = "app_title";
+	private String appVersion = "app_version";
+	private String appProperties = "app.properties";
+	private Properties settings = new Properties();
+	private static boolean state = false; //转换是否成功
 
-	public Window() {
+	private Window() {
 		/**    新建面板及按钮组件	**/
 		jp = new JPanel();
 		jb1 = new JButton("txt转Word");
 		jb2 = new JButton("wav转mp3");
-		jb3 = new JButton("txt转Word");
+		jb3 = new JButton("png转jpg");
 		jb4 = new JButton("txt转Word");
 		//jp.setLayout(new FlowLayout());
 		jp.setLayout(null);
@@ -95,6 +97,7 @@ public class Window {
 		jf.setBounds(500, 300, 460, 350);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
+		jf.setResizable(false);
 		jf.setMaximumSize(new Dimension(460, 260));
 		//jf.add(jmb);
 		jf.add(jp);
@@ -118,6 +121,14 @@ public class Window {
 
 	}
 
+	public static String getFilePath(){
+		return filePath;
+	}
+
+	public static void setFilePath(String Path){
+		filePath = Path;
+	}
+
 	public static void main(String[] args) {
 		new Window();
 	}
@@ -134,18 +145,19 @@ public class Window {
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
-			JFileChooser jfc = new JFileChooser();// TODO Auto-generated method stub
-			jfc.setFileFilter(new FileNameExtensionFilter(".wav、.wma", "wav", "wma"));
-			jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-			jfc.showDialog(new Label(), "选择");
-			File file = jfc.getSelectedFile();
-			System.out.println(jfc.getSelectedFile().getAbsolutePath());
-			//filePath = jfc.getSelectedFile().getAbsolutePath();
-
 
 			if (e.getActionCommand().equals("txt_word")) {
 
 			} else if (e.getActionCommand().equals("wav_mp3")) {
+				//限定选择文件的格式
+				JFileChooser jfc = new JFileChooser();
+				jfc.setFileFilter(new FileNameExtensionFilter(".wav、.wma", "wav", "wma"));
+				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				jfc.showDialog(new Label(), "选择");
+				File file = jfc.getSelectedFile();
+				System.out.println(jfc.getSelectedFile().getAbsolutePath());
+
+
 				progressBar.setIndeterminate(true);
 				Thread thread = new Thread(new Runnable() {
 					@Override
@@ -153,26 +165,63 @@ public class Window {
 						try{
 							System.out.println("start");
 							if (setPath && filePath!=null ){
-								Wavtomp3.Excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("mp3")));
+								state = WavtoMp3.Excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("mp3")));
 							}else{
-								Wavtomp3.Excute(file, file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("mp3"));
+								state = WavtoMp3.Excute(file, file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("mp3"));
 							}
 							SwingUtilities.invokeAndWait(new Runnable() {
 								@Override
 								public void run() {
 									System.out.println("finish");
 									progressBar.setIndeterminate(false);
+									new Toast();
 								}
 							});
 						}catch(Exception ex1){
 							System.out.println("转换过程出现错误");
 							ex1.printStackTrace();
+							state = false;
+							new Toast();
 						}
 					}
 				});
 				thread.start();
 			} else if (e.getActionCommand().equals("png_jpg")) {
+				JFileChooser jfc = new JFileChooser();
+				jfc.setFileFilter(new FileNameExtensionFilter(".png", "png"));
+				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				jfc.showDialog(new Label(), "选择");
+				File file = jfc.getSelectedFile();
+				System.out.println(jfc.getSelectedFile().getAbsolutePath());
 
+				progressBar.setIndeterminate(true);
+				Thread thread = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						try{
+							System.out.println("start");
+							if (setPath && filePath!=null ){
+								state = PngtoJpg.excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("jpg")));
+							}else{
+								state = PngtoJpg.excute(file,file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("jpg"));
+							}
+							SwingUtilities.invokeAndWait(new Runnable() {
+								@Override
+								public void run() {
+									System.out.println("finish");
+									progressBar.setIndeterminate(false);
+									new Toast();
+								}
+							});
+						}catch(Exception ex1){
+							System.out.println("转换过程出现错误");
+							ex1.printStackTrace();
+							state = false;
+							new Toast();
+						}
+					}
+				});
+				thread.start();
 			} else if (e.getActionCommand().equals("database")) {
 
 			}
@@ -182,15 +231,6 @@ public class Window {
 
 	}
 
-	//	class ProcessRate extends Thread{
-//		JProgressBar bar;
-//		public ProcessRate(){
-//			bar = progressBar;
-//		}
-//		public void run(){
-//			bar.setIndeterminate(true);
-//		}
-//	}
 	class ProcessRate extends SwingWorker<Void, Void> {
 		/*
 		 * Main task. Executed in background thread.
@@ -203,6 +243,31 @@ public class Window {
 		public Void doInBackground() {
 			bar.setIndeterminate(true);
 			return null;
+		}
+	}
+
+	class Toast{
+		private String text = "转换完成！";
+
+		public Toast(){
+			if(!state)	text = "转换失败";
+			JLabel jlToast = new JLabel(text,JLabel.CENTER);
+			JButton jbToast = new JButton("确定");
+			JFrame toast = new JFrame("提示");
+			jbToast.setPreferredSize(new Dimension(100,30));
+			jbToast.setBounds(20,50,50,20);
+			jbToast.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					toast.setVisible(false);
+				}
+			});
+			toast.setBounds(600,600,300,100);
+			toast.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			toast.setVisible(true);
+			toast.setResizable(false);
+			toast.add(jlToast,BorderLayout.CENTER);
+			toast.add(jbToast,BorderLayout.SOUTH);
 		}
 	}
 

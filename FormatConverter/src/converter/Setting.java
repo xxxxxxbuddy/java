@@ -1,3 +1,5 @@
+package converter;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,10 +10,10 @@ import java.util.Properties;
 
 public class Setting extends JFrame {
     public static String filePath = null;
-    String appTitle = "app_title";
-    String appVersion = "app_version";
-    String appProperties = "app.properties";
-    Properties settings = new Properties();
+    private String appTitle = "app_title";
+    private String appVersion = "app_version";
+    private String appProperties = "app.properties";
+    private Properties settings = new Properties();
     public Setting(){
         settings.put(appTitle,"格式转换器");
         settings.put(appVersion, "1.0");
@@ -71,14 +73,15 @@ public class Setting extends JFrame {
                 } catch (Exception ex1) {
                     ex1.printStackTrace();
                 }
-                Window.filePath = file.getAbsolutePath();
+                Window.setFilePath(file.getAbsolutePath());
                 Window.setPath = true;
-                System.out.println(Window.filePath);
+                System.out.println(Window.getFilePath());
                 jtf.setText(file.getAbsolutePath());
             }
         });
         jf.setDefaultCloseOperation(HIDE_ON_CLOSE);
         jf.setVisible(true);
+        jf.setResizable(false);
 
     }
     public static void main(String[] args){
