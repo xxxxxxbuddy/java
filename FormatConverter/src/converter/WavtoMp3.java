@@ -18,9 +18,9 @@ class WavtoMp3 {
     * @return 转化后的文件
     */
 
-	protected static boolean Excute(File source, String desFileName) {
+	protected static boolean Excute(File source, String desDirectory, String desFileName) {
 		try{
-			File target = new File(desFileName);
+			File target = new File(desDirectory + desFileName);
 			AudioAttributes audio = new AudioAttributes();
 			audio.setCodec("libmp3lame");
 			audio.setBitRate(128000); //音频比率 MP3默认是1280000

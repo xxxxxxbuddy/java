@@ -27,13 +27,15 @@ public class Window {
 	private Properties settings = new Properties();
 	private static boolean state = false; //转换是否成功
 
+
+
 	private Window() {
 		/**    新建面板及按钮组件	**/
 		jp = new JPanel();
-		jb1 = new JButton("txt转Word");
-		jb2 = new JButton("wav转mp3");
-		jb3 = new JButton("png转jpg");
-		jb4 = new JButton("txt转Word");
+		jb1 = new JButton("txt⇄word");
+		jb2 = new JButton("wav→mp3");
+		jb3 = new JButton("png→jpg");
+		jb4 = new JButton("数据库提取表格");
 		//jp.setLayout(new FlowLayout());
 		jp.setLayout(null);
 		progressBar = new JProgressBar(0, 100);
@@ -130,7 +132,7 @@ public class Window {
 	}
 
 	public static void main(String[] args) {
-		new Window();
+		Window window = new Window();
 	}
 
 	/**
@@ -147,6 +149,56 @@ public class Window {
 			}
 
 			if (e.getActionCommand().equals("txt_word")) {
+				JFileChooser jfc = new JFileChooser();
+				jfc.setFileFilter(new FileNameExtensionFilter(".txt、.doc、.docx", "txt", "doc", "docx"));
+				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				jfc.setDialogTitle("请选择txt或word文件");
+				jfc.showDialog(new Label(), "选择");
+				if(jfc.getSelectedFile()==null) return;
+				File file = jfc.getSelectedFile();
+
+				System.out.println(jfc.getSelectedFile().getAbsolutePath());
+
+				Thread thread = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						progressBar.setIndeterminate(true);
+						try {
+							System.out.println("start");
+							if (setPath && filePath != null) {	//输出路径已设置
+								if(file.getName().endsWith(".txt")){			//txt to docx
+									state = TxttoWord.Excute(file, filePath.concat("\\"), file.getName().replace(".txt",".docx"));
+								}else if (file.getName().endsWith(".doc")){		//doc to txt
+									state = WordtoTxt.Excute(file, filePath.concat("\\"), file.getName().replace(".doc",".txt"));
+								}else{											//docx to txt
+									state = WordtoTxt.Excute(file, filePath.concat("\\"), file.getName().replace(".docx",".txt"));
+								}
+								//未设置输出路径
+							} else {
+								if(file.getName().endsWith(".txt")){			//txt to docx
+									state = TxttoWord.Excute(file, file.getParent().concat("\\") , file.getName().replace(".txt",".docx"));
+								}else if (file.getName().endsWith(".doc")){		//doc to txt
+									state = WordtoTxt.Excute(file, file.getParent().concat("\\"), file.getName().replace(".doc",".txt"));
+								}else{											//docx to txt
+									state = WordtoTxt.Excute(file, file.getParent().concat("\\"), file.getName().replace(".docx",".txt"));
+								}
+							}
+							SwingUtilities.invokeAndWait(new Runnable() {
+								@Override
+								public void run() {
+									progressBar.setIndeterminate(false);
+									System.out.println("finish");
+									new Toast();
+								}
+							});
+
+						} catch (Exception ex) {
+							ex.printStackTrace();
+							System.out.println("转换失败");
+						}
+					}
+				});
+				thread.start();
 
 			} else if (e.getActionCommand().equals("wav_mp3")) {
 				//限定选择文件的格式
@@ -154,6 +206,7 @@ public class Window {
 				jfc.setFileFilter(new FileNameExtensionFilter(".wav、.wma", "wav", "wma"));
 				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 				jfc.showDialog(new Label(), "选择");
+				if(jfc.getSelectedFile()==null) return;
 				File file = jfc.getSelectedFile();
 				System.out.println(jfc.getSelectedFile().getAbsolutePath());
 
@@ -165,9 +218,9 @@ public class Window {
 						try{
 							System.out.println("start");
 							if (setPath && filePath!=null ){
-								state = WavtoMp3.Excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("mp3")));
+								state = WavtoMp3.Excute(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 3).concat("mp3"));
 							}else{
-								state = WavtoMp3.Excute(file, file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("mp3"));
+								state = WavtoMp3.Excute(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 3).concat("mp3"));
 							}
 							SwingUtilities.invokeAndWait(new Runnable() {
 								@Override
@@ -191,6 +244,7 @@ public class Window {
 				jfc.setFileFilter(new FileNameExtensionFilter(".png", "png"));
 				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 				jfc.showDialog(new Label(), "选择");
+				if(jfc.getSelectedFile()==null) return;
 				File file = jfc.getSelectedFile();
 				System.out.println(jfc.getSelectedFile().getAbsolutePath());
 
@@ -201,9 +255,9 @@ public class Window {
 						try{
 							System.out.println("start");
 							if (setPath && filePath!=null ){
-								state = PngtoJpg.excute(file,filePath.concat("\\" + file.getName().substring(0, file.getName().length() - 3).concat("jpg")));
+								state = PngtoJpg.excute(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 3).concat("jpg"));
 							}else{
-								state = PngtoJpg.excute(file,file.getAbsolutePath().substring(0, file.getAbsolutePath().length() - 3).concat("jpg"));
+								state = PngtoJpg.excute(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 3).concat("jpg"));
 							}
 							SwingUtilities.invokeAndWait(new Runnable() {
 								@Override

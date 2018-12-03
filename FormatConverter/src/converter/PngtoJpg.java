@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import javax.imageio.ImageIO;
 class PngtoJpg {
 
-  protected static boolean excute(File originalFile, String desFileName){
+  protected static boolean excute(File originalFile, String desDirectory, String desFileName){
     BufferedImage bufferedImage;
     try {
       // 读图片文件
@@ -21,7 +21,7 @@ class PngtoJpg {
       newBufferedImage.createGraphics().drawImage(bufferedImage, 0, 0,
               Color.WHITE, null);
       // 写入jpg文件
-      ImageIO.write(newBufferedImage, "jpg", new File(desFileName));
+      ImageIO.write(newBufferedImage, "jpg", new File(desDirectory + desFileName));
       System.out.println("Done");
       return true;
     } catch (IOException e) {

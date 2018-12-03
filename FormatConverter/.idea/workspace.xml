@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="create toast window">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/converter/WavtoMp3.java" afterDir="false" />
+    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/converter/TxttoWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/converter/WordtoTxt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConvertImageFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/PngtoJpg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Wavtomp3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Wavtomp3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Window$ChooseFile$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Window$ChooseFile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Window$ChooseFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Window$ProcessRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Window$ProcessRate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WavtoMp3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FormatConverter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FormatConverter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Wavtomp3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Window$ChooseFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Window$ProcessRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jave-1.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Wavtomp3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter/PngtoJpg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/PngtoJpg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter/WavtoMp3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/WavtoMp3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/Window.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,40 +32,42 @@
     <session id="-1574914568">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.20" value="1" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.20" value="3" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="class" value="2" />
+          <entry key="java" value="12" />
           <entry key="properties" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="12" />
           <entry key="Properties" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="9" />
-          <entry key="java" value="4497" />
+          <entry key="java" value="6219" />
           <entry key="properties" value="8" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4497" />
+          <entry key="JAVA" value="6219" />
           <entry key="PLAIN_TEXT" value="94" />
           <entry key="Properties" value="8" />
         </counts>
@@ -72,15 +79,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/converter/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="189" column="54" selection-start-line="189" selection-start-column="54" selection-end-line="189" selection-end-column="54" />
+            <state relative-caret-position="1258">
+              <caret line="216" column="39" lean-forward="true" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
               <folding>
-                <element signature="e#2598#2599#0" expanded="true" />
-                <element signature="e#2621#2622#0" expanded="true" />
-                <element signature="e#3608#3609#0" expanded="true" />
-                <element signature="e#3629#3630#0" expanded="true" />
-                <element signature="e#3678#3679#0" expanded="true" />
-                <element signature="e#3700#3701#0" expanded="true" />
+                <element signature="e#2592#2593#0" expanded="true" />
+                <element signature="e#2616#2617#0" expanded="true" />
+                <element signature="e#3735#3736#0" expanded="true" />
+                <element signature="e#3770#3771#0" expanded="true" />
+                <element signature="e#9421#9422#0" expanded="true" />
+                <element signature="e#9457#9458#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/converter/PngtoJpg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="140">
+              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -98,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/converter/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
+            <state relative-caret-position="1426">
               <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -108,22 +115,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.properties">
+        <entry file="file://$PROJECT_DIR$/src/converter/WavtoMp3.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/converter/WavtoMp3.java">
+        <entry file="file://$PROJECT_DIR$/src/converter/WordtoTxt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="71">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/converter/TxttoWord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -152,6 +183,9 @@
         <option value="$PROJECT_DIR$/src/Setting.java" />
         <option value="$PROJECT_DIR$/src/PngtoJpg.java" />
         <option value="$PROJECT_DIR$/src/converter/Setting.java" />
+        <option value="$PROJECT_DIR$/../../../DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/converter/TxttoWord.java" />
+        <option value="$PROJECT_DIR$/src/converter/WordtoTxt.java" />
         <option value="$PROJECT_DIR$/src/converter/WavtoMp3.java" />
         <option value="$PROJECT_DIR$/src/converter/PngtoJpg.java" />
         <option value="$PROJECT_DIR$/src/converter/Window.java" />
@@ -159,10 +193,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="865" />
-    <option name="y" value="130" />
+    <option name="x" value="352" />
+    <option name="y" value="251" />
     <option name="width" value="1400" />
-    <option name="height" value="975" />
+    <option name="height" value="976" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,9 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,17 +216,31 @@
               <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543748559974" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543840170790" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../thread" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -266,10 +311,17 @@
       <option name="project" value="LOCAL" />
       <updated>1543639175831</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create toast window">
+      <created>1543748572201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543748572201</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -282,7 +334,7 @@
     <frame x="70" y="-8" width="1858" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26751947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28086764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -291,15 +343,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4955506" weight="0.36628512" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49276975" visible="true" weight="0.41935483" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49850747" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" sideWeight="0.49888766" visible="true" weight="0.32882413" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4983315" weight="0.32848233" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4983315" weight="0.3298647" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50111234" side_tool="true" visible="true" weight="0.32882413" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5072303" side_tool="true" visible="true" weight="0.41935483" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4983315" weight="0.3298647" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49777532" weight="0.3298647" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -321,17 +373,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="create toast window" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/converter/TxtToWord.class" />
+    <entry file="file://$PROJECT_DIR$/src/converter/WordToTxt.class" />
     <entry file="file://$PROJECT_DIR$/app.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/converter/Setting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
+        <state relative-caret-position="1426">
           <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/TxttoWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/WordtoTxt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -340,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/converter/WavtoMp3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="92">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -350,22 +427,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/converter/PngtoJpg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="140">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/converter/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="189" column="54" selection-start-line="189" selection-start-column="54" selection-end-line="189" selection-end-column="54" />
+        <state relative-caret-position="1258">
+          <caret line="216" column="39" lean-forward="true" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
           <folding>
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2621#2622#0" expanded="true" />
-            <element signature="e#3608#3609#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-            <element signature="e#3678#3679#0" expanded="true" />
-            <element signature="e#3700#3701#0" expanded="true" />
+            <element signature="e#2592#2593#0" expanded="true" />
+            <element signature="e#2616#2617#0" expanded="true" />
+            <element signature="e#3735#3736#0" expanded="true" />
+            <element signature="e#3770#3771#0" expanded="true" />
+            <element signature="e#9421#9422#0" expanded="true" />
+            <element signature="e#9457#9458#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -447,6 +524,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
