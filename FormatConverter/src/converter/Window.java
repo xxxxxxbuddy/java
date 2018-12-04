@@ -10,6 +10,11 @@ import java.util.Properties;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.jvnet.substance.*;
+import org.jvnet.substance.border.*;
+import org.jvnet.substance.skin.*;
+import org.jvnet.substance.theme.*;
+
 public class Window {
 	private JFrame jf;
 	private JPanel jp;
@@ -30,12 +35,23 @@ public class Window {
 
 
 	private Window() {
+		try{
+			UIManager.setLookAndFeel(new SubstanceCremeLookAndFeel());
+			//SubstanceLookAndFeel.setSkin(new NebulaSkin());
+			SubstanceLookAndFeel.setCurrentBorderPainter(new FlatBorderPainter());
+		}catch(Exception e){
+			System.err.println("Something went wrong!");
+		}
 		/**    新建面板及按钮组件	**/
 		jp = new JPanel();
-		jb1 = new JButton("txt⇄word");
-		jb2 = new JButton("wav→mp3");
-		jb3 = new JButton("png→jpg");
+		jb1 = new JButton("文本文件");
+		jb2 = new JButton("音频文件");
+		jb3 = new JButton("图片文件");
 		jb4 = new JButton("数据库提取表格");
+		jb1.setFont(new Font("华文新魏",Font.BOLD, 20));
+		jb2.setFont(new Font("华文新魏",Font.BOLD, 20));
+		jb3.setFont(new Font("华文新魏",Font.BOLD, 20));
+		jb4.setFont(new Font("华文新魏",Font.BOLD, 20));
 		//jp.setLayout(new FlowLayout());
 		jp.setLayout(null);
 		progressBar = new JProgressBar(0, 100);
@@ -142,11 +158,11 @@ public class Window {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 
-			try {
-				UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
+//			try {
+//				UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//			} catch (Exception e1) {
+//				e1.printStackTrace();
+//			}
 
 			if (e.getActionCommand().equals("txt_word")) {
 				JFileChooser jfc = new JFileChooser();
@@ -277,7 +293,7 @@ public class Window {
 				});
 				thread.start();
 			} else if (e.getActionCommand().equals("database")) {
-
+				new db();
 			}
 
 		}
