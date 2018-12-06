@@ -30,7 +30,7 @@ public final class DBConnection {
     private String password;
 
     /* 数据库的连接 */
-    private Connection conn;
+    private static Connection conn;
 
     public DBConnection(String database, String user, String password) {
         this.server = "localhost";
@@ -58,11 +58,11 @@ public final class DBConnection {
 
         conn = null;
         Class.forName(JDBC_DRIVER);
-        String dbUrl = String.format("jdbc:mysql://%s:%d/%s?useSSL = false&serverTimezone = UTC", server, port,
+        String dbUrl = String.format("jdbc:mysql://%s:%d/%s?useSSL = false&serverTimezone = UTC&allowPublicKeyRetrieval=true", server, port,
                 database);
         conn = DriverManager.getConnection(dbUrl, user, password);
 
-        if (conn.isClosed()) return false;
+        if ( conn == null || conn.isClosed()) return false;
         return true;
     }
 
@@ -90,6 +90,7 @@ public final class DBConnection {
             String sql = String.format("select table_name from information_schema.TABLES where TABLE_SCHEMA='%s'",
                     database);
 
+            System.out.println(sql);
             stat = conn.createStatement();
             rs = stat.executeQuery(sql);
 
@@ -110,7 +111,7 @@ public final class DBConnection {
      * @return 数据表的数据集
      * @throws SQLException
      */
-    public ResultSet getTableResult(String tableName) throws SQLException {
+    public static ResultSet getTableResult(String tableName) throws SQLException {
         ResultSet rs = null;
 
         Statement stat = null;

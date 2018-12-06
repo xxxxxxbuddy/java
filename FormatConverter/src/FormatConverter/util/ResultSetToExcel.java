@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-public class ReusltSetToExcel {
+public class ResultSetToExcel {
     /**
      * 通过数据集生成对应的Excel文件 （默认以 ".xlsx" 为后缀）
      *
