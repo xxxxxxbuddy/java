@@ -1,8 +1,6 @@
 package FormatConverter.View;
 
-import FormatConverter.util.*;
-import com.mysql.cj.log.Log;
-import com.sun.jdi.InvocationException;
+import FormatConverter.util.FileConverter;
 import org.apache.log4j.Logger;
 import org.jvnet.substance.SubstanceLookAndFeel;
 import org.jvnet.substance.border.FlatBorderPainter;
@@ -15,9 +13,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 public class Window {
@@ -100,6 +95,7 @@ public class Window {
     //动作监听
     private class ChooseFile implements ActionListener {
         private Logger logger = Logger.getLogger(ChooseFile.class);
+
         @Override
         public void actionPerformed(ActionEvent e) {
             logger.info("声明动作监听");
@@ -129,7 +125,7 @@ public class Window {
                                     desFile = FileConverter.txtToword(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".docx"));
                                     state = desFile.exists();
                                 } else if (file.getName().endsWith(".doc")) {        //doc to txt
-                                   desFile = FileConverter.wordTotxt(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".txt"));
+                                    desFile = FileConverter.wordTotxt(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".txt"));
                                     state = desFile.exists();
                                 } else {                                            //docx to txt
                                     desFile = FileConverter.wordTotxt(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 5).concat(fileName + ".txt"));
@@ -229,7 +225,7 @@ public class Window {
                         File desFile = null;
                         try {
                             progressBar.setIndeterminate(true);
-                            if (!filePath .equals("") ) {
+                            if (!filePath.equals("")) {
                                 desFile = FileConverter.pngTojpg(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".jpg"));
                                 state = desFile.exists();
                             } else {

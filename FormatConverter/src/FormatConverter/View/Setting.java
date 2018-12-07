@@ -18,6 +18,7 @@ public class Setting extends JFrame {
     private String appProperties = "app.properties";
     File file = null;
     private static Logger logger = Logger.getLogger(Setting.class);
+
     public Setting() {
         //读取UI库
         try {
@@ -88,15 +89,15 @@ public class Setting extends JFrame {
                     logger.info("尝试写入配置...");
                     FileOutputStream out = new FileOutputStream(appProperties);
                     settings.put("filePath", jtf1.getText());
-                    if (!jtf2.getText() .equals("<原文件名>") ) {
+                    if (!jtf2.getText().equals("<原文件名>")) {
                         settings.put("fileName", jtf2.getText());
                     }
                     settings.store(out, "AppConfig");
                     out.close();
-                    if (!jtf2.getText().equals("<原文件目录>") ) {
+                    if (!jtf2.getText().equals("<原文件目录>")) {
                         Window.setFilePath(jtf1.getText());
                     }
-                    if (!jtf2.getText().equals("<原文件名>") ) {
+                    if (!jtf2.getText().equals("<原文件名>")) {
                         Window.setFileName(jtf2.getText());
                     }
                     logger.info("配置更新成功");

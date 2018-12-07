@@ -1,7 +1,6 @@
 package FormatConverter.View;
 
 import FormatConverter.DAL.DBConnection;
-import FormatConverter.util.FileConverter;
 import FormatConverter.util.SqlConvertor;
 import org.apache.log4j.Logger;
 import org.jvnet.substance.SubstanceLookAndFeel;
@@ -24,7 +23,7 @@ public class db {
     JPanel jp;
     JLabel jl1, jl2, jl3, jl4, jl5;
     JTextField jtf1, jtf2, jtf3, jtf4, jtf5;
-    JButton jb1, jb2, jb3, jb4, jb5,jb6;
+    JButton jb1, jb2, jb3, jb4, jb5, jb6;
     JComboBox jcb;
     private String Database, username, password, url;
     private int port;
@@ -83,7 +82,7 @@ public class db {
         jb5.setBounds(620, 30, 60, 20);
         jb3.setBounds(380, 130, 110, 30);
         jb4.setBounds(520, 130, 110, 30);
-        jb6.setBounds(450,180,110,30);
+        jb6.setBounds(450, 180, 110, 30);
 
         jcb.setBounds(370, 30, 240, 20);
         jp.add(jl1);
@@ -144,7 +143,7 @@ public class db {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            if (e.getActionCommand() .equals("Exit") ) {
+            if (e.getActionCommand().equals("Exit")) {
                 logger.info("退出数据库连接界面");
                 System.exit(0);
             } else if (e.getActionCommand().equals("Connect")) {
@@ -182,7 +181,7 @@ public class db {
                                     }
                                     //System.out.println(tableNames.get(0));
                                 } catch (SQLException ex1) {
-                                   logger.error("数据库查询错误:" + ex1.getMessage());
+                                    logger.error("数据库查询错误:" + ex1.getMessage());
                                 }
                             }
                         } catch (Exception ex) {
@@ -224,8 +223,7 @@ public class db {
                 }
 
 
-            }
-            else if (e.getActionCommand().equals("ExcelToSql")) {
+            } else if (e.getActionCommand().equals("ExcelToSql")) {
                 logger.info("导入Excel表到数据库中");
                 String sql = null;
                 JFileChooser jfc = new JFileChooser();
@@ -245,16 +243,14 @@ public class db {
                 try {
                     logger.info("尝试插入数据库...");
                     sql = SqlConvertor.ExcelToSql(file, jcb.getSelectedItem().toString());
-                }catch (IOException ex){
+                } catch (IOException ex) {
                     JOptionPane.showMessageDialog(jf, "插入失败", "提示", JOptionPane.ERROR_MESSAGE);
                 }
                 if (sql != null) {
                     logger.info("插入成功");
                     JOptionPane.showMessageDialog(jf, "插入成功", "提示", JOptionPane.PLAIN_MESSAGE);
                 }
-            }
-
-            else if(e.getActionCommand().equals("disconnect")){
+            } else if (e.getActionCommand().equals("disconnect")) {
                 logger.info("断开连接");
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override

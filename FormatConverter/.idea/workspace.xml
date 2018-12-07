@@ -1,45 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/FormatConverter/View/db.java" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/src/FormatConverter/View/db.java" line="270" />
+    <bookmark url="file://$PROJECT_DIR$/src/FormatConverter/View/db.java" line="269" />
+    <bookmark url="file://$PROJECT_DIR$/src/FormatConverter/View/db.java" line="268" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="split modules">
-      <change afterPath="$PROJECT_DIR$/lib/activation-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-collections4-4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-compress-1.18.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/curvesapi-1.05.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jave-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-api-2.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-core-2.3.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-impl-2.3.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-examples-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-excelant-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-ooxml-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-ooxml-schemas-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-scratchpad-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/substance.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/xmlbeans-3.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/View/Window.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/View/db.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/util/PngtoJpg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/util/ReusltSetToExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java" afterDir="false" />
+    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="import log config">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/substance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/substance.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/PngtoJpg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/View/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/TxttoWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/util/TxttoWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/WavtoMp3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/WordtoTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/util/WordtoTxt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/View/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/View/config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/PngtoJpg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/ResultSetToExcel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/TxttoWord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/WordtoTxt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/队徽.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,53 +29,66 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/FormatConverter$Window__1_.ic" NAME="Window (1) Coverage Results" MODIFIED="1544080932060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>FormatConverter.View.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1574914568">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.20" value="3" />
           <entry key="project.open.time.21" value="3" />
-          <entry key="project.open.time.22" value="2" />
-          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="java" value="31" />
-          <entry key="properties" value="4" />
+          <entry key="class" value="5" />
+          <entry key="classpath" value="1" />
+          <entry key="java" value="47" />
+          <entry key="log" value="2" />
+          <entry key="png" value="1" />
+          <entry key="project" value="1" />
+          <entry key="properties" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="31" />
-          <entry key="Properties" value="4" />
+          <entry key="CLASS" value="5" />
+          <entry key="Eclipse" value="2" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="47" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="9" />
-          <entry key="java" value="7462" />
-          <entry key="properties" value="8" />
-          <entry key="txt" value="181" />
+          <entry key="dummy" value="11" />
+          <entry key="java" value="13249" />
+          <entry key="properties" value="10" />
+          <entry key="txt" value="331" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7462" />
-          <entry key="PLAIN_TEXT" value="190" />
-          <entry key="Properties" value="8" />
+          <entry key="JAVA" value="13249" />
+          <entry key="PLAIN_TEXT" value="342" />
+          <entry key="Properties" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -102,73 +96,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WordtoTxt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/TxttoWord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/PngtoJpg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/ReusltSetToExcel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/db.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="-318">
+              <caret line="256" column="60" selection-start-line="256" selection-start-column="60" selection-end-line="256" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="63" column="58" lean-forward="true" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/FileConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="167" column="37" lean-forward="true" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/poi-4.0.0.jar!/org/apache/poi/ss/usermodel/WorkbookFactory.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/logs/log.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Toast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -176,17 +163,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+            <state relative-caret-position="381">
+              <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="197">
+              <caret line="233" column="48" selection-start-line="233" selection-start-column="48" selection-end-line="233" selection-end-column="48" />
+              <folding>
+                <element signature="method#BindActionListener#0;class#Window#0" />
+                <element signature="method#ComposeFrame#0;class#Window#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -203,6 +206,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>setFile</find>
+      <find>ProcessRate</find>
+      <find>convert</find>
+      <find>System</find>
+      <find>失败</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.properties" />
         <option value="$PROJECT_DIR$/ConvertImageFile.java" />
         <option value="$PROJECT_DIR$/src/ConvertImageFile.java" />
         <option value="$PROJECT_DIR$/src/Wavtomp3.java" />
@@ -235,17 +241,26 @@
         <option value="$PROJECT_DIR$/src/FormatConverter_Controller/TxttoWord.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter_Controller/WavtoMp3.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter_Controller/PngtoJpg.java" />
-        <option value="$PROJECT_DIR$/src/FormatConverter/View/db.java" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/View/toast.java" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/View/config.java" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/util/ReusltSetToExcel.java" />
+        <option value="$PROJECT_DIR$/app.properties" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/Setting.java" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/View/Toast.java" />
+        <option value="$PROJECT_DIR$/src/FormatConverter/View/db.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/Window.java" />
+        <option value="$PROJECT_DIR$/logs/log.log" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
-    <option name="y" value="-8" />
+    <option name="x" value="554" />
+    <option name="y" value="165" />
     <option name="width" value="1400" />
-    <option name="height" value="976" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -276,13 +291,6 @@
               <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="DAL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,15 +314,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544004125583" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/substance.jar!/" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544151828696" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/stax-api-1.0.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="file.status.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Documents\Tencent Files\691997599\FileRecv\大三上\Java\java\FormatConverter\src\FormatConverter\util" />
       <recent name="D:\My Documents\Tencent Files\691997599\FileRecv\大三上\Java\java\FormatConverter\src\converter" />
       <recent name="D:\My Documents\Tencent Files\691997599\FileRecv\大三上\Java\java\FormatConverter\src" />
     </key>
@@ -331,7 +340,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Window">
+  <component name="RunManager" selected="Application.db">
+    <configuration name="Setting (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FormatConverter.View.Setting" />
+      <module name="FormatConverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FormatConverter.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Setting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FormatConverter_View.Setting" />
       <module name="FormatConverter" />
@@ -339,19 +361,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FormatConverter_View.Window" />
+    <configuration name="Window (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FormatConverter.View.Window" />
       <module name="FormatConverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FormatConverter.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FormatConverter.View.config" />
+      <module name="FormatConverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FormatConverter.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="db" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FormatConverter_View.db" />
+      <option name="MAIN_CLASS_NAME" value="FormatConverter.View.db" />
       <module name="FormatConverter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="FormatConverter_View.*" />
+          <option name="PATTERN" value="FormatConverter.View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -360,14 +401,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Window" />
       <item itemvalue="Application.Setting" />
+      <item itemvalue="Application.Window (1)" />
+      <item itemvalue="Application.Setting (1)" />
+      <item itemvalue="Application.config" />
       <item itemvalue="Application.db" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Window" />
         <item itemvalue="Application.db" />
+        <item itemvalue="Application.Window (1)" />
+        <item itemvalue="Application.config" />
+        <item itemvalue="Application.Setting (1)" />
         <item itemvalue="Application.Setting" />
       </list>
     </recent_temporary>
@@ -425,7 +470,28 @@
       <option name="project" value="LOCAL" />
       <updated>1543907858800</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="split modules">
+      <created>1544004135141</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544004135142</updated>
+    </task>
+    <task id="LOCAL-00008" summary="db's fe part is almost done,&#10;Excel to Sql hasn't been tested,&#10;Logger is to complete tommorrow.">
+      <created>1544109583374</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544109583374</updated>
+    </task>
+    <task id="LOCAL-00009" summary="import log config">
+      <created>1544151493741</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544151493741</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -441,24 +507,24 @@
     <frame x="70" y="-8" width="1858" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3042269" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.15016685" />
+      <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.14627364" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49944383" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.487208" visible="true" weight="0.36628512" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49850747" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49944383" weight="0.32952183" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77864295" weight="0.4106029" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49552238" weight="0.23159145" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4983315" weight="0.32848233" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49721915" weight="0.32848233" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4983315" weight="0.3298647" />
-      <window_info anchor="bottom" x="74" y="687" width="1798" height="342" id="Event Log" order="8" sideWeight="0.5061179" side_tool="true" visible="true" weight="0.32882413" />
+      <window_info anchor="bottom" x="74" y="687" width="1798" height="342" id="Event Log" order="8" sideWeight="0.22135706" side_tool="true" weight="0.4106029" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.4938821" visible="true" weight="0.32882413" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49276975" visible="true" weight="0.32848233" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,6 +535,35 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" x="0" y="0" width="300" height="774" id="Documentation" order="8" side_tool="true" weight="0.32985073" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.15016685" />
+      <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.14627364" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49944383" weight="0.3298647" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77864295" visible="true" weight="0.4106029" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49552238" weight="0.23159145" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49721915" weight="0.32848233" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4983315" weight="0.3298647" />
+      <window_info anchor="bottom" x="74" y="687" width="1798" height="342" id="Event Log" order="8" sideWeight="0.22135706" side_tool="true" visible="true" weight="0.4106029" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49276975" weight="0.32848233" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" x="0" y="0" width="300" height="774" id="Documentation" order="8" side_tool="true" weight="0.32985073" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -481,7 +576,31 @@
     <MESSAGE value="import DBConnection" />
     <MESSAGE value="import substance ui jar" />
     <MESSAGE value="split modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="split modules" />
+    <MESSAGE value="db's fe part is almost done,&#10;Excel to Sql hasn't been tested,&#10;Logger is to complete tommorrow." />
+    <MESSAGE value="import log config" />
+    <option name="LAST_COMMIT_MESSAGE" value="import log config" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="tableNames" language="JAVA" />
+        <watch expression="sql" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>sql</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tableNames</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/converter/TxtToWord.class" />
@@ -517,17 +636,10 @@
     <entry file="file://$PROJECT_DIR$/src/FormatConverter_Controller/WavtoMp3.java" />
     <entry file="file://$PROJECT_DIR$/src/FormatConverter_Controller/PngtoJpg.java" />
     <entry file="file://$PROJECT_DIR$/src/FormatConverter_View/Window.java" />
-    <entry file="file://$PROJECT_DIR$/app.properties">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="265">
+          <caret line="1020" selection-start-line="1020" selection-end-line="1021" />
         </state>
       </provider>
     </entry>
@@ -538,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/TxttoWord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -552,47 +657,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/PngtoJpg.java">
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath" />
+    <entry file="file://$PROJECT_DIR$/.project" />
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/PngtoJpg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/EventDispatchThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#2706#2707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="131">
+          <caret line="42" column="86" lean-forward="true" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/ReusltSetToExcel.java">
+    <entry file="jar://$PROJECT_DIR$/lib/poi-4.0.0.jar!/org/apache/poi/ss/usermodel/WorkbookFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/db.java">
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/ResultSetToExcel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="261">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/FileConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="167" column="37" lean-forward="true" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Setting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        <state relative-caret-position="381">
+          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Toast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/db.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="256" column="60" selection-start-line="256" selection-start-column="60" selection-end-line="256" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="197">
+          <caret line="233" column="48" selection-start-line="233" selection-start-column="48" selection-end-line="233" selection-end-column="48" />
+          <folding>
+            <element signature="method#BindActionListener#0;class#Window#0" />
+            <element signature="method#ComposeFrame#0;class#Window#0" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="63" column="58" lean-forward="true" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
