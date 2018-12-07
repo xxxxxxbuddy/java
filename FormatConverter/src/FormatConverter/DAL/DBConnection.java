@@ -62,8 +62,7 @@ public final class DBConnection {
                 database);
         conn = DriverManager.getConnection(dbUrl, user, password);
 
-        if (conn == null || conn.isClosed()) return false;
-        return true;
+        return conn != null && !conn.isClosed();
     }
 
     /**
@@ -90,7 +89,6 @@ public final class DBConnection {
             String sql = String.format("select table_name from information_schema.TABLES where TABLE_SCHEMA='%s'",
                     database);
 
-            System.out.println(sql);
             stat = conn.createStatement();
             rs = stat.executeQuery(sql);
 

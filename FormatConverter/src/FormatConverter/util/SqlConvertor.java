@@ -105,38 +105,61 @@ public final class SqlConvertor {
 
         StringBuffer buffer = new StringBuffer();
         logger.info("读取Excel文件...");
-        try (Workbook workbook = WorkbookFactory.create(file)) {
-            logger.info("读取第一个工作表...");
+        try(Workbook workbook = WorkbookFactory.create(file)){
             Sheet sheet = workbook.getSheetAt(0);
-
-            // 获取行数
             int rowCount = sheet.getLastRowNum() + 1;
-            // 获取第一行即列名
             Row columnNames = sheet.getRow(0);
-            if (columnNames == null) {
-                logger.info("Excel第一个工作表中没有第一行...");
+            if(columnNames == null){
                 return null;
             }
 
-            logger.info("生成Sql语句...");
-            // 获取列数
             int columnCount = columnNames.getPhysicalNumberOfCells();
-            // 读取第一行生成insert语句中的列名
-            buffer.append(String.format("insert into %s (", tableName));
-            for (int col = 0; col < columnCount; col++)
-                buffer.append(String.format("%s%c", columnNames.getCell(col).getStringCellValue(),
-                        col + 1 == columnCount ? ')' : ','));
-            buffer.append(" values ");
-
-            // 读取剩下的行，生成插入的值
+            buffer.append(String.format("insert into %s (",tableName));
+            for(int col = 0; col < columnCount; col++){
+                buffer.append(String.format("%s%c", columnNames.getCell(col).getStringCellValue(),col + 1 == columnCount ? ')' : ','));
+            }
+            buffer.append("values");
             for (int r = 1; r < rowCount; r++) {
                 Row row = sheet.getRow(r);
                 buffer.append("(");
-                for (int col = 0; col < columnCount; col++)
+                for (int col = 0; col < columnCount; col++){
                     buffer.append(String.format("'%s'%c", row.getCell(col).getStringCellValue(),
                             col + 1 == columnCount ? ')' : ','));
                 buffer.append(r + 1 == rowCount ? " ; " : " , ");
             }
+        }
+//        try (Workbook workbook = WorkbookFactory.create(file)) {
+//            logger.info("读取第一个工作表...");
+//            Sheet sheet = workbook.getSheetAt(0);
+//
+//            // 获取行数
+//            int rowCount = sheet.getLastRowNum() + 1;
+//            // 获取第一行即列名
+//            Row columnNames = sheet.getRow(0);
+//            if (columnNames == null) {
+//                logger.info("Excel第一个工作表中没有第一行...");
+//                return null;
+//            }
+//
+//            logger.info("生成Sql语句...");
+//            // 获取列数
+//            int columnCount = columnNames.getPhysicalNumberOfCells();
+//            // 读取第一行生成insert语句中的列名
+//            buffer.append(String.format("insert into %s (", tableName));
+//            for (int col = 0; col < columnCount; col++)
+//                buffer.append(String.format("%s%c", columnNames.getCell(col).getStringCellValue(),
+//                        col + 1 == columnCount ? ')' : ','));
+//            buffer.append(" values ");
+//
+//            // 读取剩下的行，生成插入的值
+//            for (int r = 1; r < rowCount; r++) {
+//                Row row = sheet.getRow(r);
+//                buffer.append("(");
+//                for (int col = 0; col < columnCount; col++)
+//                    buffer.append(String.format("'%s'%c", row.getCell(col).getStringCellValue(),
+//                            col + 1 == columnCount ? ')' : ','));
+//                buffer.append(r + 1 == rowCount ? " ; " : " , ");
+//            }
         } catch (EncryptedDocumentException e) {
             logger.error("文档编码异常：" + e.getMessage());
             throw e;

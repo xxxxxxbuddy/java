@@ -44,8 +44,6 @@ public class Toast {
         toast.setResizable(false);
         toast.add(jlToast, BorderLayout.CENTER);
         toast.add(jbToast, BorderLayout.SOUTH);
-
-        logger.info("Test");
     }
 
 }

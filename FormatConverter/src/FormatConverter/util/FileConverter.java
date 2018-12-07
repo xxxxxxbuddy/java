@@ -80,7 +80,7 @@ public final class FileConverter {
             return null;
         }
 
-        File targetrFile = new File(desDirectory, desFileName + "mp3");
+        File targetrFile = new File(desDirectory, desFileName + ".mp3");
 
         logger.info("初始化音频...");
         AudioAttributes audio = new AudioAttributes();
