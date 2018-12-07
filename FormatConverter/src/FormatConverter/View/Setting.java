@@ -1,5 +1,6 @@
 package FormatConverter.View;
 
+import org.apache.log4j.Logger;
 import org.jvnet.substance.SubstanceLookAndFeel;
 import org.jvnet.substance.border.FlatBorderPainter;
 import org.jvnet.substance.skin.SubstanceCremeLookAndFeel;
@@ -9,7 +10,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
 
@@ -17,6 +17,7 @@ public class Setting extends JFrame {
     private Properties settings = new Properties();
     private String appProperties = "app.properties";
     File file = null;
+    private static Logger logger = Logger.getLogger(Setting.class);
     public Setting() {
         //读取UI库
         try {
@@ -24,9 +25,8 @@ public class Setting extends JFrame {
             //SubstanceLookAndFeel.setSkin(new NebulaSkin());
             SubstanceLookAndFeel.setCurrentBorderPainter(new FlatBorderPainter());
         } catch (Exception e) {
-            System.err.println("Something went wrong!");
+            logger.error("UI库加载失败:" + e.getMessage());
         }
-
 
 
         JFrame jf = new JFrame();
@@ -54,13 +54,9 @@ public class Setting extends JFrame {
         jtf1.setBounds(90, 20, 300, 20);
         jtf2.setBounds(90, 50, 300, 20);
         jb.setBounds(400, 20, 35, 20);
-        jb1.setBounds(100,100,60,30);
-        jb2.setBounds(300,100,60,30);
+        jb1.setBounds(100, 100, 60, 30);
+        jb2.setBounds(300, 100, 60, 30);
         jf.setBounds(600, 600, 480, 200);
-        System.out.println(Window.getFilePath());
-        System.out.println(Window.getFileName());
-        System.out.println(Window.getFilePath() != "");
-        System.out.println(Window.getFileName() != "");
         if (!Window.getFilePath().equals("")) {
             jtf1.setText(Window.getFilePath());
         } else {
@@ -78,9 +74,10 @@ public class Setting extends JFrame {
                 JFileChooser jfc = new JFileChooser();
                 jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 jfc.showDialog(new Label(), "选择目录");
-                if(jfc.getSelectedFile() == null) return;
+                if (jfc.getSelectedFile() == null) return;
                 File file = jfc.getSelectedFile();
                 jtf1.setText(file.getAbsolutePath());
+                logger.info("设置输出路径:" + file.getAbsolutePath());
             }
         });
         jb1.addActionListener(new ActionListener() {
@@ -88,22 +85,23 @@ public class Setting extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     //写入配置
+                    logger.info("尝试写入配置...");
                     FileOutputStream out = new FileOutputStream(appProperties);
                     settings.put("filePath", jtf1.getText());
-                    if(jtf2.getText()!="<原文件名>"){
+                    if (!jtf2.getText() .equals("<原文件名>") ) {
                         settings.put("fileName", jtf2.getText());
                     }
                     settings.store(out, "AppConfig");
                     out.close();
-                    if(jtf2.getText()!="<原文件目录>"){
+                    if (!jtf2.getText().equals("<原文件目录>") ) {
                         Window.setFilePath(jtf1.getText());
                     }
-                    if(jtf2.getText()!="<原文件名>"){
+                    if (!jtf2.getText().equals("<原文件名>") ) {
                         Window.setFileName(jtf2.getText());
                     }
+                    logger.info("配置更新成功");
                 } catch (Exception ex1) {
-                    ex1.printStackTrace();
-                    System.out.println("配置写入失败");
+                    logger.error("配置写入失败:" + ex1.getMessage());
                 }
                 jf.setVisible(false);
             }
@@ -122,7 +120,4 @@ public class Setting extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        new Setting();
-    }
 }

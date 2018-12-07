@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 
 public class Toast {
-    private  static Logger logger = Logger.getLogger(Toast.class);
+    private static Logger logger = Logger.getLogger(Toast.class);
 
     private String text = "转换完成！";
 
@@ -48,12 +48,4 @@ public class Toast {
         logger.info("Test");
     }
 
-    public Toast(String type){
-        super();
-        if(type == "DatabaseError"){
-            text = "数据库状态改变，刷新失败";
-        }else if(type == "EmptyFP"){
-            text = "请设置输出路径";
-        }
-    }
 }

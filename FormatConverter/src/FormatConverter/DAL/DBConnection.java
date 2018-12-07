@@ -62,7 +62,7 @@ public final class DBConnection {
                 database);
         conn = DriverManager.getConnection(dbUrl, user, password);
 
-        if ( conn == null || conn.isClosed()) return false;
+        if (conn == null || conn.isClosed()) return false;
         return true;
     }
 

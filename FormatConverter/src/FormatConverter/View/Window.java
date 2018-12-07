@@ -1,5 +1,9 @@
 package FormatConverter.View;
+
 import FormatConverter.util.*;
+import com.mysql.cj.log.Log;
+import com.sun.jdi.InvocationException;
+import org.apache.log4j.Logger;
 import org.jvnet.substance.SubstanceLookAndFeel;
 import org.jvnet.substance.border.FlatBorderPainter;
 import org.jvnet.substance.skin.SubstanceCremeLookAndFeel;
@@ -11,6 +15,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 public class Window {
@@ -29,24 +36,25 @@ public class Window {
     private String appProperties = "app.properties";
     private Properties settings = new Properties();
     public static boolean state = false; //转换是否成功
-
+    private static Logger logger = Logger.getLogger(Window.class);
 
     private Window() {
-        CreateComponents();
+        InitComponents();
         BindActionListener();
         ComposeFrame();
         ReadConfig();
     }
 
     //创建组件
-    private void CreateComponents(){
+    private void InitComponents() {
+        logger.info("初始化窗体组件...");
         //读取UI库
         try {
             UIManager.setLookAndFeel(new SubstanceCremeLookAndFeel());
             //SubstanceLookAndFeel.setSkin(new NebulaSkin());
             SubstanceLookAndFeel.setCurrentBorderPainter(new FlatBorderPainter());
         } catch (Exception e) {
-            System.err.println("Something went wrong!");
+            logger.info("UI库加载失败:" + e.getMessage());
         }
 
         jp = new JPanel();
@@ -68,7 +76,7 @@ public class Window {
         jm.add(jmi);
         jmb.add(jm);
         /**    设置组件位置   **/
-         jmb.setBounds(0, 0, 500, 25);
+        jmb.setBounds(0, 0, 500, 25);
         jb1.setBounds(5, 30, 200, 100);
         jb2.setBounds(220, 30, 200, 100);
         jb3.setBounds(5, 150, 200, 100);
@@ -91,13 +99,15 @@ public class Window {
 
     //动作监听
     private class ChooseFile implements ActionListener {
+        private Logger logger = Logger.getLogger(ChooseFile.class);
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            logger.info("声明动作监听");
             //打开文件选择框
             JFileChooser jfc = new JFileChooser();
             //文本文件转换
             if (e.getActionCommand().equals("txt_word")) {
+                logger.info("文本文件转换");
                 //限定选取文件格式
                 jfc.setFileFilter(new FileNameExtensionFilter(".txt、.doc、.docx", "txt", "doc", "docx"));
                 jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -106,43 +116,51 @@ public class Window {
 
                 if (jfc.getSelectedFile() == null) return;
                 File file = jfc.getSelectedFile();
+                logger.info("选择源文件:" + file.getAbsolutePath());
 
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        File desFile = null;
                         try {
                             progressBar.setIndeterminate(true);
-                            if ( filePath != "") {    //输出路径已设置
+                            if (filePath != "") {    //输出路径已设置
                                 if (file.getName().endsWith(".txt")) {            //txt to docx
-                                    state = TxttoWord.Excute(file, filePath.concat("\\"), file.getName().substring(0,file.getName().length()-4).concat(fileName + ".docx"));
+                                    desFile = FileConverter.txtToword(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".docx"));
+                                    state = desFile.exists();
                                 } else if (file.getName().endsWith(".doc")) {        //doc to txt
-                                    state = WordtoTxt.Excute(file, filePath.concat("\\"), file.getName().substring(0,file.getName().length()-4).concat(fileName + ".txt"));
+                                   desFile = FileConverter.wordTotxt(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".txt"));
+                                    state = desFile.exists();
                                 } else {                                            //docx to txt
-                                    state = WordtoTxt.Excute(file, filePath.concat("\\"), file.getName().substring(0,file.getName().length()-5).concat(fileName + ".txt"));
+                                    desFile = FileConverter.wordTotxt(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 5).concat(fileName + ".txt"));
+                                    state = desFile.exists();
                                 }
+                                logger.info("转换完成，生成文件:" + desFile.getAbsolutePath());
                                 //未设置输出路径
                             } else {
                                 if (file.getName().endsWith(".txt")) {            //txt to docx
-                                    state = TxttoWord.Excute(file, file.getParent().concat("\\"), file.getName().substring(0,file.getName().length()-4).concat(fileName + ".docx"));
+                                    desFile = FileConverter.txtToword(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".docx"));
+                                    state = desFile.exists();
                                 } else if (file.getName().endsWith(".doc")) {        //doc to txt
-                                    state = WordtoTxt.Excute(file, file.getParent().concat("\\"), file.getName().substring(0,file.getName().length()-4).concat(fileName + ".txt"));
+                                    desFile = FileConverter.wordTotxt(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".txt"));
+                                    state = desFile.exists();
                                 } else {                                            //docx to txt
-                                    state = WordtoTxt.Excute(file, file.getParent().concat("\\"), file.getName().substring(0,file.getName().length()-5).concat(fileName + ".txt"));
+                                    desFile = FileConverter.wordTotxt(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 5).concat(fileName + ".txt"));
+                                    state = desFile.exists();
                                 }
+                                logger.info("转换完成，生成文件:" + desFile.getAbsolutePath());
                             }
                             SwingUtilities.invokeAndWait(new Runnable() {
                                 @Override
                                 public void run() {
                                     progressBar.setIndeterminate(false);
-                                    System.out.println("finish");
                                     new Toast();
                                 }
                             });
 
-                        } catch (Exception ex) {
+                        } catch (Exception e) {
+                            logger.error("转换失败:" + e.getMessage());
                             progressBar.setIndeterminate(false);
-                            ex.printStackTrace();
-                            System.out.println("转换失败");
                             state = false;
                             new Toast();
                         }
@@ -152,66 +170,71 @@ public class Window {
 
             } else if (e.getActionCommand().equals("wav_mp3")) {
                 //音频文件
-
+                logger.info("音频文件转换");
                 //限定选取文件格式
                 jfc.setFileFilter(new FileNameExtensionFilter(".wav、.wma", "wav", "wma"));
                 jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                jfc.setDialogTitle("请选择wav或wma文件");
                 jfc.showDialog(new Label(), "选择");
                 if (jfc.getSelectedFile() == null) return;
                 File file = jfc.getSelectedFile();
-
+                logger.info("选择源文件:" + file.getAbsolutePath());
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        File desFile = null;
                         try {
                             progressBar.setIndeterminate(true);
-                            System.out.println("start");
-                            if ( filePath != "") {
-                                state = WavtoMp3.Excute(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".mp3"));
+                            if (filePath != "") {
+                                desFile = FileConverter.wavTomp3(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".mp3"));
+                                state = desFile.exists();
+                                logger.info("转换完成，生成文件:" + desFile.getAbsolutePath());
                             } else {
-                                state = WavtoMp3.Excute(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".mp3"));
+                                desFile = FileConverter.wavTomp3(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".mp3"));
+                                state = desFile.exists();
+                                logger.info("转换完成，生成文件:" + desFile.getAbsolutePath());
                             }
                             SwingUtilities.invokeAndWait(new Runnable() {
                                 @Override
                                 public void run() {
-                                    System.out.println("finish");
                                     progressBar.setIndeterminate(false);
                                     new Toast();
                                 }
                             });
                         } catch (Exception ex1) {
-                            System.out.println("转换过程出现错误");
                             progressBar.setIndeterminate(false);
                             ex1.printStackTrace();
                             state = false;
                             new Toast();
+                            logger.error("转换失败:" + ex1.getMessage());
                         }
                     }
                 });
                 thread.start();
-            }
-
-            else if (e.getActionCommand().equals("png_jpg")) {
+            } else if (e.getActionCommand().equals("png_jpg")) {
                 //图片文件
-
+                logger.info("图片文件转换");
                 //限定选取文件格式
                 jfc.setFileFilter(new FileNameExtensionFilter(".png", "png"));
                 jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                jfc.setDialogTitle("请选择png文件");
                 jfc.showDialog(new Label(), "选择");
                 if (jfc.getSelectedFile() == null) return;
 
                 File file = jfc.getSelectedFile();
-
+                logger.info("选择源文件:" + file.getAbsolutePath());
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        File desFile = null;
                         try {
                             progressBar.setIndeterminate(true);
-                            System.out.println("start");
-                            if ( filePath != "") {
-                                state = PngtoJpg.excute(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".jpg"));
+                            if (!filePath .equals("") ) {
+                                desFile = FileConverter.pngTojpg(file, filePath.concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".jpg"));
+                                state = desFile.exists();
                             } else {
-                                state = PngtoJpg.excute(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".jpg"));
+                                desFile = FileConverter.pngTojpg(file, file.getParent().concat("\\"), file.getName().substring(0, file.getName().length() - 4).concat(fileName + ".jpg"));
+                                state = desFile.exists();
                             }
                             SwingUtilities.invokeAndWait(new Runnable() {
                                 @Override
@@ -222,15 +245,15 @@ public class Window {
                             });
                         } catch (Exception ex1) {
                             progressBar.setIndeterminate(false);
-                            System.out.println("转换过程出现错误");
-                            ex1.printStackTrace();
                             state = false;
                             new Toast();
+                            logger.error("转换失败:" + ex1.getMessage());
                         }
                     }
                 });
                 thread.start();
             } else if (e.getActionCommand().equals("database")) {
+                logger.info("操作数据库");
                 new db();
             }
 
@@ -240,8 +263,8 @@ public class Window {
     }
 
     //绑定动作监听
-    private void BindActionListener(){
-
+    private void BindActionListener() {
+        logger.info("绑定动作监听...");
         jb1.setActionCommand("txt_word");
         jb2.setActionCommand("wav_mp3");
         jb3.setActionCommand("png_jpg");
@@ -263,8 +286,8 @@ public class Window {
     }
 
     //组成窗体
-    private void ComposeFrame(){
-
+    private void ComposeFrame() {
+        logger.info("组成窗体...");
         /**    将组件添加到面板	**/
         jp.add(jb1);
         jp.add(jb2);
@@ -285,7 +308,8 @@ public class Window {
     }
 
     //读取配置
-    private void ReadConfig(){
+    private void ReadConfig() {
+        logger.info("读取配置信息...");
         try {
             FileInputStream in = new FileInputStream(appProperties);
             settings.load(in);
@@ -295,10 +319,10 @@ public class Window {
             filePath = settings.getProperty("filePath");
             fileName = settings.getProperty("fileName");
             in.close();
-            System.out.println("加载成功");
+            logger.info("加载完成!");
         } catch (Exception ex2) {
             //ex2.printStackTrace();
-            System.out.println("无法加载配置文件");
+            logger.info("配置文件加载失败");
         }
     }
 
@@ -325,9 +349,6 @@ public class Window {
     public static void main(String[] args) {
         Window window = new Window();
     }
-
-
-
 
 
 }
