@@ -12,10 +12,10 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 
@@ -30,6 +30,7 @@ public class db {
     private int port;
     private static DBConnection dbc;
     private static Logger logger = Logger.getLogger(db.class);
+    int result = 0;//影响行数
 
     public db() {
         logger.info("载入数据库连接界面...");
@@ -48,11 +49,11 @@ public class db {
         jl4 = new JLabel("密码：");
         jl5 = new JLabel("IP地址：");
 
-        Database = "TEST";
+        Database = "";
         port = 3306;
-        username = "root";
-        password = "zhanglei0501";
-        url = "127.0.0.1";
+        username = "";
+        password = "";
+        url = "localhost";
 
         jtf1 = new JTextField(Database);
         jtf2 = new JTextField(Integer.toString(port));
@@ -105,6 +106,14 @@ public class db {
         jp.add(jb6);
         jp.add(jcb);
 
+        //未打开扩展界面时
+        jb3.setEnabled(false);
+        jb4.setEnabled(false);
+        jb5.setEnabled(false);
+        jb6.setEnabled(false);
+        jcb.setEnabled(false);
+
+
         jb1.setActionCommand("Connect");
         jb2.setActionCommand("Exit");
         jb5.setActionCommand("Refresh");
@@ -123,6 +132,7 @@ public class db {
         jb4.addActionListener(act4);
         jb5.addActionListener(act5);
         jb6.addActionListener(act6);
+        jb1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0),act1);
         jf = new JFrame("连接服务器");
         jf.setVisible(true);
         jf.setBounds(600, 300, 360, 300);
@@ -141,20 +151,26 @@ public class db {
     }
 
     class action implements ActionListener {
-        boolean isConnected = false;
+
+
         @Override
         public void actionPerformed(ActionEvent e) {
 
             if (e.getActionCommand().equals("Exit")) {
                 logger.info("退出数据库连接界面");
-                System.exit(0);
+                jf.setVisible(false);
             } else if (e.getActionCommand().equals("Connect")) {
-                logger.info("尝试连接数据库...");
                 dbc = new DBConnection(jtf5.getText(), Integer.parseInt(jtf2.getText()), jtf1.getText(), jtf3.getText(), jtf4.getText());
                 Thread thread2 = new Thread(new Runnable() {
                     @Override
                     synchronized public void run() {
                         try {
+                            //打开扩展界面
+                            jb3.setEnabled(true);
+                            jb4.setEnabled(true);
+                            jb5.setEnabled(true);
+                            jb6.setEnabled(true);
+                            jcb.setEnabled(true);
                             while (jf.getWidth() <= 700) {
                                 jf.setSize(jf.getWidth() + 20, 300);
                                 wait(20);
@@ -168,25 +184,23 @@ public class db {
                     @Override
                     public void run() {
                         try {
-                            isConnected = dbc.connect();
-                            SwingUtilities.invokeAndWait(thread2);
-                            if (isConnected) {
-                                try {
-                                    jtf1.setEditable(false);
-                                    jtf2.setEditable(false);
-                                    jtf3.setEditable(false);
-                                    jtf4.setEditable(false);
-                                    jtf5.setEditable(false);
-                                    List<String> tableNames = dbc.getTableNames();
-                                    for (int i = 0; i < tableNames.size(); i++) {
-                                        jcb.addItem(tableNames.get(i));
-                                    }
-                                } catch (SQLException ex1) {
-                                    logger.error("数据库查询错误:" + ex1.getMessage());
+                            dbc.connect();
+
+                            if (!dbc.isClosed()) {
+                                SwingUtilities.invokeAndWait(thread2);
+                                jtf1.setEditable(false);
+                                jtf2.setEditable(false);
+                                jtf3.setEditable(false);
+                                jtf4.setEditable(false);
+                                jtf5.setEditable(false);
+                                List<String> tableNames = dbc.getTableNames();
+                                for (int i = 0; i < tableNames.size(); i++) {
+                                    jcb.addItem(tableNames.get(i));
                                 }
+                            }else{
+                                JOptionPane.showMessageDialog(jf, "数据库连接失败", "提示", JOptionPane.WARNING_MESSAGE);
                             }
                         } catch (Exception ex) {
-                            logger.error("数据库连接失败:" + ex.getMessage());
                             JOptionPane.showMessageDialog(jf, "数据库连接失败", "提示", JOptionPane.WARNING_MESSAGE);
                         }
 
@@ -198,21 +212,22 @@ public class db {
             //重新读取数据库中的表
             else if (e.getActionCommand().equals("Refresh")) {
                 logger.info("重新读取数据库中的表...");
-                try{
+                try {
                     List<String> tableNames = dbc.getTableNames();
                     jcb.removeAllItems();
                     for (int i = 0; i < tableNames.size(); i++) {
                         jcb.addItem(tableNames.get(i));
                     }
-                }catch(Exception ex2){
-                        ex2.getMessage();
-                    }
+                } catch (Exception ex2) {
+                    ex2.getMessage();
+                }
 
             }
             //从数据库中提取表存为Excel
             else if (e.getActionCommand().equals("RsToExcel")) {
+                File file = null;
                 logger.info("从数据库中提取表...");
-                if (jcb.getSelectedItem() == null){
+                if (jcb.getSelectedItem() == null) {
                     JOptionPane.showMessageDialog(jf, "未选择数据表", "提示", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
@@ -221,17 +236,21 @@ public class db {
                     return;
                 }
                 try {
-                    ResultSet rs = DBConnection.getTableResult(jcb.getSelectedItem().toString());
-                    SqlConvertor.ReusltSetToExcel(rs,Window.getFilePath(),jtf1.getText() + "-" + jcb.getSelectedItem().toString());
+                    ResultSet rs = dbc.getTableResult(jcb.getSelectedItem().toString());
+                    file = SqlConvertor.ReusltSetToExcel(rs, Window.getFilePath(), jtf1.getText() + "-" + jcb.getSelectedItem().toString());
                 } catch (Exception ex) {
-                    logger.error("转换失败:" + ex.getMessage());
+                    logger.error("导出失败:" + ex.getMessage());
+                    JOptionPane.showMessageDialog(jf, "导出失败", "提示", JOptionPane.WARNING_MESSAGE);
+                }
+                if (file.exists()) {
+                    JOptionPane.showMessageDialog(jf, "导出成功！", "提示", JOptionPane.PLAIN_MESSAGE);
                 }
 
 
             } else if (e.getActionCommand().equals("ExcelToSql")) {
                 logger.info("导入Excel表到数据库中");
                 String sql = null;
-                int result = 0;
+
                 JFileChooser jfc = new JFileChooser();
                 //限定选取文件格式
                 jfc.setFileFilter(new FileNameExtensionFilter(".xlsx、.xls", "xls", "xlsx"));
@@ -247,32 +266,35 @@ public class db {
                     return;
                 }
                 try {
-                    logger.info("尝试插入数据库...");
-                    sql = SqlConvertor.ExcelToSql(file, jcb.getSelectedItem().toString());
-                    try{
-                        result = dbc.insert(sql);   //影响的行数
-                    }catch (SQLException ex){
-                        logger.error("插入失败:" + ex.getMessage());
-                    }
+                    File afile = new File(file.getPath());
+                    sql = SqlConvertor.ExcelToSql(afile, jcb.getSelectedItem().toString());
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(jf, "插入失败", "提示", JOptionPane.ERROR_MESSAGE);
+                    return;
                 }
+                if(sql == null){
+                    JOptionPane.showMessageDialog(jf, "Excel内存在不支持的数据类型", "提示", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                result = dbc.insert(sql);   //影响的行数
                 if (result != 0) {
                     logger.info("插入成功");
-                    JOptionPane.showMessageDialog(jf, "插入成功", "提示", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(jf, "插入成功,共影响" + result + "行", "提示", JOptionPane.PLAIN_MESSAGE);
                 }
+
             } else if (e.getActionCommand().equals("disconnect")) {
                 logger.info("断开连接");
-                try{
-                    System.out.println(dbc);
-                    dbc.close();
-                }catch(SQLException ex1){
-                    logger.error("数据库连接关闭失败");
-                }
+                dbc.close();
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     synchronized public void run() {
                         try {
+                            //关闭扩展界面
+                            jb3.setEnabled(false);
+                            jb4.setEnabled(false);
+                            jb5.setEnabled(false);
+                            jb6.setEnabled(false);
+                            jcb.setEnabled(false);
                             while (jf.getWidth() >= 360) {
                                 jf.setSize(jf.getWidth() - 20, 300);
                                 wait(20);
@@ -283,7 +305,6 @@ public class db {
                             jtf3.setEditable(true);
                             jtf4.setEditable(true);
                             jtf5.setEditable(true);
-                            isConnected = false;
                         } catch (Exception ex1) {
                             logger.error("界面线程阻塞:" + ex1.getMessage());
                         }

@@ -355,8 +355,8 @@ public class Window {
                 FileOutputStream out = new FileOutputStream(appProperties);
                 settings.store(out, "AppConfig");
                 logger.info("创建成功");
-                filePath="";
-                fileName="";
+                filePath = "";
+                fileName = "";
 
             } catch (Exception e) {
                 e.printStackTrace();

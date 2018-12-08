@@ -88,10 +88,8 @@ public class Setting extends JFrame {
                     //写入配置
                     logger.info("尝试写入配置...");
                     FileOutputStream out = new FileOutputStream(appProperties);
-                    settings.put("filePath", jtf1.getText());
-                    if (!jtf2.getText().equals("<原文件名>")) {
-                        settings.put("fileName", jtf2.getText());
-                    }
+                    settings.put("filePath", jtf1.getText()=="<原文件目录>" ? "" : jtf1.getText());
+                    settings.put("fileName", jtf2.getText()=="<原文件名>" ? "" : jtf2.getText());
                     settings.store(out, "AppConfig");
                     out.close();
                     if (!jtf2.getText().equals("<原文件目录>")) {
