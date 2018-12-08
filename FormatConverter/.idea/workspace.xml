@@ -10,16 +10,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/FormatConverter/View/db.java" line="277" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="import log config">
+    <list default="true" id="9c19671a-1c0b-4504-8013-ff4d7173054d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/substance.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/View/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/View/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/View/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/View/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/View/config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/View/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/View/db.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,29 +35,29 @@
     <session id="-1574914568">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.20" value="3" />
-          <entry key="project.open.time.21" value="4" />
+          <entry key="project.open.time.21" value="5" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="30" />
           <entry key="classpath" value="1" />
-          <entry key="java" value="57" />
-          <entry key="log" value="2" />
+          <entry key="java" value="59" />
+          <entry key="log" value="3" />
           <entry key="png" value="1" />
           <entry key="project" value="1" />
           <entry key="properties" value="8" />
@@ -73,7 +68,8 @@
           <entry key="CLASS" value="30" />
           <entry key="Eclipse" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="57" />
+          <entry key="JAVA" value="59" />
+          <entry key="Log" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="8" />
         </counts>
@@ -83,20 +79,44 @@
           <entry key="dummy" value="11" />
           <entry key="java" value="14362" />
           <entry key="properties" value="10" />
-          <entry key="txt" value="331" />
+          <entry key="txt" value="345" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="14362" />
-          <entry key="PLAIN_TEXT" value="342" />
+          <entry key="PLAIN_TEXT" value="356" />
           <entry key="Properties" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3151">
+              <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6555">
+              <caret line="304" column="27" selection-start-line="304" selection-start-column="27" selection-end-line="304" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/logs/log.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,17 +172,17 @@
         <option value="$PROJECT_DIR$/src/FormatConverter/util/ExcelToSql.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/Toast.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/Window.java" />
-        <option value="$PROJECT_DIR$/logs/log.log" />
         <option value="$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/Setting.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/DAL/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/FormatConverter/View/db.java" />
+        <option value="$PROJECT_DIR$/logs/log.log" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="531" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="100" />
+    <option name="y" value="167" />
     <option name="width" value="1400" />
     <option name="height" value="976" />
   </component>
@@ -180,42 +200,6 @@
           <expand>
             <path>
               <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="DAL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FormatConverter" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormatConverter" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -229,9 +213,9 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="formatconverter" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544240099959" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/stax-api-1.0.1.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544260586525" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -406,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544151493741</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="final version">
+      <created>1544240144989</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1544240144989</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -419,9 +410,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="-8" width="1858" height="1096" extended-state="6" />
+    <frame x="738" y="95" width="1400" height="976" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.16518354" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.22910447" />
       <window_info id="Structure" order="1" sideWeight="0.501548" side_tool="true" weight="0.14627364" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -430,7 +421,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49944383" weight="0.32952183" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.77864295" visible="true" weight="0.35862786" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77864295" weight="0.40973872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49552238" weight="0.23076923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,7 +430,6 @@
       <window_info anchor="bottom" x="74" y="687" width="1798" height="342" id="Event Log" order="8" sideWeight="0.22135706" side_tool="true" weight="0.4106029" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49276975" weight="0.32744282" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3298109" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -449,6 +439,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" x="0" y="0" width="300" height="774" id="Documentation" order="8" side_tool="true" weight="0.32985073" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298109" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.15016685" />
@@ -503,7 +494,8 @@
     <MESSAGE value="split modules" />
     <MESSAGE value="db's fe part is almost done,&#10;Excel to Sql hasn't been tested,&#10;Logger is to complete tommorrow." />
     <MESSAGE value="import log config" />
-    <option name="LAST_COMMIT_MESSAGE" value="import log config" />
+    <MESSAGE value="final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -555,13 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WordtoTxt.java" />
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/TxttoWord.java" />
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/config.java" />
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/WavtoMp3.java" />
     <entry file="file://$PROJECT_DIR$/icon.png">
       <provider selected="true" editor-type-id="images" />
@@ -592,17 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/log.log">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/FileConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4232">
           <caret line="195" column="13" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="178" selection-start-line="178" selection-end-line="178" />
-          <folding>
-            <element signature="e#5559#5560#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,10 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#5852#5853#0" expanded="true" />
-            <element signature="e#5884#5885#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -659,11 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,12 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="e#3897#3898#0" expanded="true" />
-            <element signature="e#3937#3938#0" expanded="true" />
-            <element signature="e#3974#3975#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,12 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="379" selection-start-line="379" selection-end-line="379" />
-          <folding>
-            <element signature="e#11821#11822#0" expanded="true" />
-            <element signature="e#11873#11874#0" expanded="true" />
-            <element signature="e#16086#16087#0" expanded="true" />
-            <element signature="e#16135#16136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,9 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,9 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="198" selection-start-line="198" selection-end-line="198" />
-          <folding>
-            <element signature="e#7258#7259#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,9 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="918" selection-start-line="918" selection-end-line="918" />
-          <folding>
-            <element signature="e#34391#34392#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,12 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="1373" selection-start-line="1373" selection-end-line="1373" />
-          <folding>
-            <element signature="e#53547#53548#0" expanded="true" />
-            <element signature="e#53586#53587#0" expanded="true" />
-            <element signature="e#82849#82850#0" expanded="true" />
-            <element signature="e#82919#82920#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,10 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="2556" selection-start-line="2556" selection-end-line="2556" />
-          <folding>
-            <element signature="e#7916#7917#0" expanded="true" />
-            <element signature="e#7969#7970#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,18 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="1954" selection-start-line="1954" selection-end-line="1954" />
-          <folding>
-            <element signature="e#3709#3710#0" expanded="true" />
-            <element signature="e#3747#3748#0" expanded="true" />
-            <element signature="e#3919#3920#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
-            <element signature="e#3988#3989#0" expanded="true" />
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#42760#42761#0" expanded="true" />
-            <element signature="e#42795#42796#0" expanded="true" />
-            <element signature="e#50384#50385#0" expanded="true" />
-            <element signature="e#50453#50454#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,9 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#680#681#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,10 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,16 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="409" selection-start-line="409" selection-end-line="409" />
-          <folding>
-            <element signature="e#5225#5226#0" expanded="true" />
-            <element signature="e#5272#5273#0" expanded="true" />
-            <element signature="e#5303#5304#0" expanded="true" />
-            <element signature="e#5335#5336#0" expanded="true" />
-            <element signature="e#7197#7198#0" expanded="true" />
-            <element signature="e#7261#7262#0" expanded="true" />
-            <element signature="e#15342#15343#0" expanded="true" />
-            <element signature="e#15433#15434#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,27 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="741" selection-start-line="741" selection-end-line="741" />
-          <folding>
-            <element signature="e#4417#4418#0" expanded="true" />
-            <element signature="e#4495#4496#0" expanded="true" />
-            <element signature="e#23487#23488#0" expanded="true" />
-            <element signature="e#23533#23534#0" expanded="true" />
-            <element signature="e#29732#29733#0" expanded="true" />
-            <element signature="e#29780#29781#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2691">
-          <caret line="329" column="11" selection-start-line="329" selection-start-column="11" selection-end-line="329" selection-end-column="11" />
-          <folding>
-            <element signature="class#ChooseFile#0;class#Window#0" />
-            <element signature="method#BindActionListener#0;class#Window#0" />
-            <element signature="e#14265#14505#0" expanded="true" />
-            <element signature="e#14504#14505#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,16 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="91" column="93" selection-start-line="91" selection-start-column="93" selection-end-line="91" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,12 +809,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="2481" column="27" selection-start-line="2481" selection-start-column="27" selection-end-line="2481" selection-end-column="27" />
-          <folding>
-            <element signature="e#94608#94609#0" expanded="true" />
-            <element signature="e#94649#94650#0" expanded="true" />
-          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/util/SqlConvertor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3151">
+          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormatConverter/View/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6555">
+          <caret line="304" column="27" selection-start-line="304" selection-start-column="27" selection-end-line="304" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -946,10 +836,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>FormatConverter:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1017,7 +909,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>substance</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
